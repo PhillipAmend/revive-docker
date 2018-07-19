@@ -13,7 +13,7 @@ spec:
         app: revive-adserver
     spec:
       containers:
-        name: docker-registry-ui
+      - name: docker-registry-ui
         image: kluless/revive-docker:1.0.0
         ports:
         - containerPort: 80
