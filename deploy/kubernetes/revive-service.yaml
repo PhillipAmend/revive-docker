@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: revive-adserver 
+spec:
+  selector:
+    app: revive-adserver
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+

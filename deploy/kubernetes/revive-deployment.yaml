@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: revive-adserver 
+spec:
+  selector:
+    matchLabels:
+      app: revive-adserver
+  replicas: 1 
+  template: 
+    metadata:
+      labels:
+        app: revive-adserver
+    spec:
+      containers:
+        name: docker-registry-ui
+        image: kluless/revive-docker:1.0.0
+        ports:
+        - containerPort: 80
